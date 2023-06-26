@@ -1,0 +1,20 @@
+name: "Podcast Generator"
+author: "Jagan Punjal"
+description: "generates a fee dor a poscast from a YAML file"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+
+branding:
+  icon: "git-branch"
+  color: "red"
+
+inputs:
+  email:
+    description: the commiter's email address
+    required: true
+    default: ${{ github.actor }}@localhost
+  name:
+    description: The committers name
+    required: true
+    default: ${{ github.actor }}
